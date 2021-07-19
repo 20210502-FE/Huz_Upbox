@@ -24,3 +24,51 @@ img {
   width: 100%;
   height: auto;
 }
+
+.wrapper {
+  max-width: calc(100% - 32px);
+  margin: 0 auto;
+}
+
+.title {
+  position: relative;
+  font-family: $display-font-regular;
+  font-size: 47px;
+  font-style: normal;
+  line-height: 57px;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: $display-font-regular;
+  font-size: 36px;
+  font-style: normal;
+  line-height: 44px;
+  text-align: left;
+  padding: 10px 0;
+
+  @include respond-to(tablet-portrait) {
+    font-size: 32px;
+    line-height: 36px;
+  }
+}
+
+.description {
+  padding: 10px;
+  font-family: $font-regular;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 23px;
+  letter-spacing: 0.01em;
+  text-align: left;
+
+  @include respond-to(tablet-portrait) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.underline {
+  width: 222px;
+  margin: 0 auto;
+}

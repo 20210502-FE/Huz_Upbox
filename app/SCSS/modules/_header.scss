@@ -1,0 +1,168 @@
+.header {
+  padding: 18px 0;
+
+  @include respond-to(tablet-portrait) {
+    padding: 36px 0;
+  }
+
+  &__wrapper {
+
+    @include respond-to(tablet-portrait) {
+      max-width: calc(100% - 40px);
+    }
+
+    @include respond-to(desktop) {
+      max-width: calc(100% - 111px);
+    }
+  }
+
+  &__logo {
+    align-self: center;
+    max-width: 56px;
+    height: 56px;
+    width: 100%;
+
+    @include respond-to(tablet-portrait) {
+      max-width: 129px;
+      height: 37px;
+      width: 100%;
+    }
+
+    @include respond-to(desktop) {
+      max-width: 221px;
+      width: 100%;
+    }
+  }
+
+  &__nav {
+    display: block;
+    position: relative;
+    top: 18px;
+    left: 0;
+    z-index: 1;
+
+    @include respond-to(tablet-portrait) {
+      position: static;
+    }
+  }
+
+  &__nav-toggle a {
+    transition: color 0.3s ease;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 15px;
+    letter-spacing: 0.16em;
+
+    @include respond-to(tablet-portrait) {
+      color: $color-black;
+      font-size: 10px;
+      line-height: 13px;
+      letter-spacing: 0.16em;
+    }
+
+    @include respond-to(desktop) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  &__nav-toggle a:hover {
+    color: $color-silver;
+  }
+
+  &__nav-toggle input {
+    display: block;
+    width: 41px;
+    height: 30px;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+  }
+
+  &__nav-toggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 6px;
+    position: relative;
+    background-color: $color-black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 2px 0;
+    transition: transform 0.5s ease;
+
+    @include respond-to(tablet-portrait) {
+      display: none;
+    }
+  }
+
+  &__nav-toggle span:first-child {
+    transform-origin: 0 0;
+  }
+
+  &__nav-toggle span:nth-last-child(2) {
+    transform-origin: 0 100%;
+  }
+
+  &__nav-toggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  &__nav-toggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  &__nav-toggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  &__nav-list {
+
+    @include respond-to(phone-only) {
+      position: absolute;
+      width: 200px;
+      margin: -66px 0 0 57px;
+      padding: 20px;
+      padding-top: 74px;
+      background-color: $color-pink;
+      transform-origin: 0 0;
+      right: -17px;
+      transform: translate(100%, 0);
+      transition: transform 0.5s ease-in;
+    }
+
+    @include respond-to(tablet-portrait) {
+      display: flex;
+      padding: 0 10px;
+    }
+  }
+
+  &__nav-list li {
+    padding: 10px 0;
+    font-size: 22px;
+
+    @include respond-to(tablet-portrait) {
+      margin: 0 15px;
+    }
+
+    @include respond-to(desktop) {
+      margin: 0 27px;
+    }
+  }
+
+  &__nav-toggle input:checked ~ ul {
+    transform: none;
+  }
+
+  &__button {
+
+    @include respond-to(phone-only) {
+      margin: -30px;
+      border: none;
+      color: $color-white;
+    }
+  }
+}
