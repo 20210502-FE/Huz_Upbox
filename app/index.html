@@ -6,10 +6,244 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>UpBox</title>
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
-<header></header>
-<main></main>
-<footer></footer>
+<header class="header">
+    <div class="wrapper header__wrapper flex flex_space-between">
+        <div class="header__logo">
+            <picture>
+                <source srcset="assets/images/logo.png" media="(min-width: 1200px)">
+                <source srcset="assets/images/logo-tablet.png" media="(min-width: 600px)">
+                <source srcset="assets/images/logo-mobile.png" media="(max-width: 599px)">
+                <img src="assets/images/logo.png" alt="box">
+            </picture>
+        </div>
+        <nav class="header__nav">
+            <div class="header__nav-toggle">
+                <input type="checkbox"/>
+                <span></span>
+                <span></span>
+                <span></span>
+                <ul class="header__nav-list">
+                    <li><a href="#">THIS MONTH</a></li>
+                    <li><a href="#">SKIN</a></li>
+                    <li><a href="#">HAIR</a></li>
+                    <li><a href="#">BATH</a></li>
+                    <li><a href="#">SALE</a></li>
+                    <li>
+                        <button type="button" class="button button_transparent header__button">LOG IN ></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<main>
+    <section class="top-banner">
+        <div class="wrapper top-banner__wrapper">
+            <div class="top-banner__content">
+                <h1 class="top-banner__heading">Look good without leaving your house.</h1>
+                <div class="description top-banner__description">
+                    Upbox is the easiest way to look your best without having to hunt for the perfect makeup
+                    combination. Our stylists curate the latest trends and send them directly to your door every month.
+                </div>
+                <button type="button" class="button button_white top-banner__button">SIGN UP></button>
+            </div>
+            <picture class="top-banner__images">
+                <source srcset="assets/images/banner-box-desktop.png" media="(min-width: 1200px)">
+                <source srcset="assets/images/banner-box-tablet.png" media="(min-width: 600px)">
+                <source srcset="assets/images/banner-box-mobile.png" media="(max-width: 599px)">
+                <img src="assets/images/banner-box.png" alt="box">
+            </picture>
+        </div>
+    </section>
+    <section class="plan">
+        <div class="wrapper plan__wrapper flex flex_column">
+            <h2 class="title plan__title">Pick your plan</h2>
+            <div class="underline plan__underline">
+                <img src="assets/images/underline.png" alt="underline">
+            </div>
+            <div class="plan__content">
+                <div class="plan__content_left flex flex_column flex_align-center">
+                    <h3 class="plan__subtitle">Monthly</h3>
+                    <p>$18/mo</p>
+                    <button type="button" class="button button_pink plan__button">FIND YOUR BOX</button>
+                </div>
+                <div class="plan__content_right flex flex_column flex_align-center">
+                    <h3 class="plan__subtitle">Yearly</h3>
+                    <p>$15/mo</p>
+                    <button type="button" class="button button_pink plan__button">FIND YOUR BOX</button>
+                </div>
+            </div>
+            <div class="description plan__description">
+                Your plan auto-renews at the end of 30 days from the 1st day you signed-up.
+            </div>
+        </div>
+    </section>
+    <section class="instruction">
+        <div class="wrapper instruction__wrapper flex flex_column">
+            <h2 class="title instruction__title">How it works?</h2>
+            <div class="underline instruction__underline">
+                <img src="assets/images/underline.png" alt="underline">
+            </div>
+
+            <div class="instruction__content instruction__content_left">
+                <div class="instruction__image instruction__image_first">
+                    <img src="assets/images/art-marker-1.png" alt="art" class="instruction__image-marker-1">
+                    <img src="assets/images/setup-profile.png" alt="setup-profile">
+                </div>
+                <div class="description instruction__description">
+                    <h3 class="subtitle instruction__subtitle">Setup your profile & preferences</h3>
+                    <div>
+                        Once you create an account, you can start to tell us your likes and dislikes so we can tailor
+                        the experience just for you.
+                    </div>
+                </div>
+            </div>
+            <div class="instruction__content instruction__content_right">
+                <div class="instruction__image instruction__image_second">
+                    <img src="assets/images/custom-box.png" alt="box">
+                    <img src="assets/images/art-marker-2.png" alt="art" class="instruction__image-marker-2">
+                </div>
+                <div class="description  instruction__description">
+                    <h3 class="subtitle instruction__subtitle">Review your custom box</h3>
+                    <div>
+                        Once we get to know you, we will show you the box we’ve crafted. This is your chance to approve
+                        it before we ship it to your house.
+                    </div>
+                </div>
+            </div>
+            <div class="instruction__content instruction__content_left">
+                <div class="instruction__image instruction__image_third">
+                    <img src="assets/images/try-it.png" alt="setup-profile">
+                    <img src="assets/images/art-marker-3.png" alt="art" class="instruction__image-marker-3">
+                </div>
+                <div class="description instruction__description">
+                    <h3 class="subtitle instruction__subtitle">Try it on at home</h3>
+                    <div>
+                        Your box will arrive within 3-5 days (usually sooner) and you get the joy to unbox your Upbox.
+                        Try it all on and send back whatever you’re not in love with.
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="button button_white instruction__button">TRY IT FOR YOURSELF></button>
+        </div>
+    </section>
+    <section class="social">
+        <div class="wrapper social__wrapper flex flex_column flex_align-center">
+            <h2 class="title social__title">Social Posts</h2>
+            <div class="social__content flex flex_wrap flex_content-center">
+                <figure class="social__post">
+                    <picture class="social__post-image">
+                        <img src="assets/images/social-posts-1.png" alt="social post">
+                    </picture>
+                    <figcaption class="description social__post-description">
+                        How to rock the lip look that turns heads
+                    </figcaption>
+                </figure>
+                <figure class="social__post">
+                    <picture class="social__post-image">
+                        <img src="assets/images/social-posts-2.png" alt="social post">
+                    </picture>
+                    <figcaption class="description social__post-description">
+                        Find the perfect shade for the season
+                    </figcaption>
+                </figure>
+                <figure class="social__post">
+                    <picture class="social__post-image">
+                        <img src="assets/images/social-posts-3.png" alt="social post">
+                    </picture>
+                    <figcaption class="description social__post-description">
+                        The 5 eye shadow secrets you never knew
+                    </figcaption>
+                </figure>
+                <figure class="social__post">
+                    <picture class="social__post-image">
+                        <img src="assets/images/social-posts-4.png" alt="social post">
+                    </picture>
+                    <figcaption class="description social__post-description">
+                        The pro-tips for at home hair dying
+                    </figcaption>
+                </figure>
+            </div>
+            <button type="button" class="button button_pink social__button">FOLLOW US ON INSTAGRAM</button>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="wrapper footer__wrapper">
+        <div class="flex flex_space-between">
+            <div class="logo footer__logo">
+                <a href="#"><img src="assets/images/logo.png" alt="logo"></a>
+            </div>
+            <div class="footer__socials flex">
+                <a href="#"><img src="assets/icons/instagram-icon.png" alt="instagram"></a>
+                <a href="#"><img src="assets/icons/fb-icon.png" alt="facebook"></a>
+                <a href="#"><img src="assets/icons/tw-icon.png" alt="twitter"></a>
+                <a href="#"><img src="assets/icons/sc-icons.png" alt="snap chat"></a>
+            </div>
+        </div>
+        <div class="footer__row flex flex_wrap flex_space-between">
+            <div class="footer__nav-col">
+                <div class="footer__nav-content">
+                    <h3>Upbox</h3>
+                    <p>Upbox Bag</p>
+                    <p>Upbox Box Platinum</p>
+                    <p>Upbox Box VIP</p>
+                    <p>Deals</p>
+                    <p>Seasonal Items</p>
+                    <p>Upbox Promise</p>
+                </div>
+            </div>
+            <div class="footer__nav-col">
+                <div class="footer__nav-content">
+                    <h3>Find Us On</h3>
+                    <p>Instagram</p>
+                    <p>Facebook</p>
+                    <p>TikTok</p>
+                    <p>SnapChat</p>
+                    <p>Twitter</p>
+                </div>
+            </div>
+            <div class="footer__nav-col">
+                <div class="footer__nav-content">
+                    <h3>Product</h3>
+                    <p>Get the App</p>
+                    <p>Loyalty Program</p>
+                    <p>Affiliates</p>
+                    <p>Press</p>
+                </div>
+            </div>
+            <div class="footer__nav-col">
+                <div class="footer__nav-content">
+                    <h3>Help</h3>
+                    <p>Returns</p>
+                    <p>FAQ</p>
+                    <p>Contact</p>
+                    <p>Community</p>
+                    <p>Videos</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyrights flex flex_column">
+            <div class="footer__copyrights-content">
+                <div class="footer__copyrights-link">
+                    <div>
+                        <a href="#">Terms</a>
+                    </div>
+                    <div>
+                        <a href="">Privacy Policy</a>
+                    </div>
+                </div>
+                <div>
+                    <p>© 2020 Quest AI. Upbox is a Sample Project and open source design project free for personal and
+                        commercial use.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
